@@ -35,8 +35,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     // this is the current page visible by default
-    double screenWidth = MediaQuery.of(context).size.width;
-    double screenHeight = MediaQuery.of(context).size.height;
+    // double screenWidth = MediaQuery.of(context).size.width;
+    // double screenHeight = MediaQuery.of(context).size.height;
 
     Widget activePage = const Home();
 
@@ -101,7 +101,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           // top
           Align(
             alignment: Alignment.topRight,
-            child: SvgPicture.asset('assets/bg_top.svg'),
+            child: SvgPicture.asset('assets/bg_top2.svg'),
           ),
           // middle left
           // Align(
@@ -116,7 +116,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           // // bottom
           Align(
             alignment: Alignment.bottomLeft,
-            child: SvgPicture.asset('assets/bg_bottom.svg'),
+            child: SvgPicture.asset('assets/bg_bottom2.svg'),
           ),
           activePage,
         ],
