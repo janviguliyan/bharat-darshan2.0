@@ -1,5 +1,6 @@
 import 'package:bharat_darshan/bottom_nav.dart';
 import 'package:bharat_darshan/routes/router_const.dart';
+import 'package:bharat_darshan/screens/child_screens/list_places.dart';
 import 'package:bharat_darshan/screens/parent_screens/favourite.dart';
 import 'package:bharat_darshan/screens/child_screens/place_details.dart';
 import 'package:bharat_darshan/screens/splash_screen.dart';
@@ -94,6 +95,12 @@ class _HomeState extends State<Home> {
                       OutlinedButton(
                         onPressed: () {
                           print('See all pressed');
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  ListScreen(title: 'Featured'),
+                            ),
+                          );
                         },
                         style: OutlinedButton.styleFrom(
                           side: BorderSide(
@@ -155,6 +162,12 @@ class _HomeState extends State<Home> {
                       OutlinedButton(
                         onPressed: () {
                           print('See all pressed');
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  ListScreen(title: 'Places Near You'),
+                            ),
+                          );
                         },
                         style: OutlinedButton.styleFrom(
                           side: BorderSide(
@@ -384,6 +397,11 @@ class _HomeState extends State<Home> {
                       OutlinedButton(
                         onPressed: () {
                           print('See all pressed');
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => ListScreen(title: 'Recent'),
+                            ),
+                          );
                         },
                         style: OutlinedButton.styleFrom(
                           side: BorderSide(
@@ -429,19 +447,6 @@ class _HomeState extends State<Home> {
                       );
                     },
                   ),
-                  const SizedBox(height: 20),
-                  // place details
-                  ElevatedButton(
-                    onPressed: () {
-                      print('fav clicked');
-                      // context.go('/placeDetails');
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                            builder: (context) => const PlaceDetails()),
-                      );
-                    },
-                    child: Text("place details"),
-                  ),
                   const SizedBox(height: 30),
                 ],
               ),
@@ -474,6 +479,11 @@ class _CategoryItemState extends State<CategoryItem> {
     return InkWell(
       onTap: () {
         print("clicked ${widget.label}");
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => ListScreen(title: widget.label),
+          ),
+        );
       },
       borderRadius: BorderRadius.circular(15),
       child: Column(
