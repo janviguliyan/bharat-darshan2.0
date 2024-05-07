@@ -80,26 +80,26 @@ class MyAppRouter {
         builder: (context, state) => const BlogScreen(),
       ),
 
-      ShellRoute(
-        navigatorKey: _shellNavigator,
-        builder: (context, state, child) {
-          return Home(
-            key: state.pageKey,
-          );
-        },
-        routes: [
-          GoRoute(
-            path: '/placeDetails',
-            pageBuilder: (context, state) {
-              return NoTransitionPage(
-                child: PlaceDetails(
-                  key: state.pageKey,
-                ),
-              );
-            },
-          ),
-        ],
-      ),
+      // ShellRoute(
+      //   navigatorKey: _shellNavigator,
+      //   builder: (context, state, child) {
+      //     return Home(
+      //       key: state.pageKey,
+      //     );
+      //   },
+      //   routes: [
+      //     GoRoute(
+      //       path: '/placeDetails',
+      //       pageBuilder: (context, state) {
+      //         return NoTransitionPage(
+      //           child: PlaceDetails(
+      //             key: state.pageKey,
+      //           ),
+      //         );
+      //       },
+      //     ),
+      //   ],
+      // ),
     ],
   );
 }
