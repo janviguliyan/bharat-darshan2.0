@@ -124,7 +124,19 @@ class _HomeState extends State<Home> {
                     physics: const NeverScrollableScrollPhysics(),
                     itemCount: 2,
                     itemBuilder: (context, index) {
-                      return const FeaturedItem();
+                      final placeData = 2;
+                      return InkWell(
+                        onTap: () {
+                          print(
+                              "place data passed to open place details $placeData");
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => PlaceDetails(),
+                            ),
+                          );
+                        },
+                        child: FeaturedItem(),
+                      );
                     },
                   ),
                   const SizedBox(height: 20),
@@ -174,7 +186,19 @@ class _HomeState extends State<Home> {
                     physics: const NeverScrollableScrollPhysics(),
                     itemCount: 2,
                     itemBuilder: (context, index) {
-                      return NearbyItem();
+                      final placeData = 2;
+                      return InkWell(
+                        onTap: () {
+                          print(
+                              "place data passed to open place details $placeData");
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => PlaceDetails(),
+                            ),
+                          );
+                        },
+                        child: NearbyItem(),
+                      );
                     },
                   ),
                   const SizedBox(height: 20),
@@ -390,7 +414,19 @@ class _HomeState extends State<Home> {
                     physics: const NeverScrollableScrollPhysics(),
                     itemCount: 4,
                     itemBuilder: (context, index) {
-                      return const FeaturedItem();
+                      final placeData = 2;
+                      return InkWell(
+                        onTap: () {
+                          print(
+                              "place data passed to open place details $placeData");
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => PlaceDetails(),
+                            ),
+                          );
+                        },
+                        child: FeaturedItem(),
+                      );
                     },
                   ),
                   const SizedBox(height: 20),
